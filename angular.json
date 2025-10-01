@@ -7,7 +7,15 @@
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
-          "style": "scss"
+          "style": "scss",
+          "standalone": false,
+           "type": "component"
+        },
+        "@schematics/angular:directive": {
+          "standalone": false
+        },
+        "@schematics/angular:pipe": {
+          "standalone": false
         }
       },
       "root": "",
@@ -18,6 +26,9 @@
           "builder": "@angular/build:application",
           "options": {
             "browser": "src/main.ts",
+            "polyfills": [
+              "zone.js"
+            ],
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",
             "assets": [
@@ -29,7 +40,6 @@
             "styles": [
               "src/styles.scss"
             ]
-           
           },
           "configurations": {
             "production": {
@@ -73,6 +83,10 @@
         "test": {
           "builder": "@angular/build:karma",
           "options": {
+            "polyfills": [
+              "zone.js",
+              "zone.js/testing"
+            ],
             "tsConfig": "tsconfig.spec.json",
             "inlineStyleLanguage": "scss",
             "assets": [
@@ -90,6 +104,6 @@
     }
   },
   "cli": {
-    "analytics": "487ebdac-d793-4dda-a5dd-48b7d5419fdf"
+    "analytics": "4034faf0-c239-49c2-be4b-0294494c12db"
   }
 }
