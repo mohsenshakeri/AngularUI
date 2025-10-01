@@ -1,0 +1,37 @@
+.box {
+  background-color: red;
+  width: 100%;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.label {
+  color: black;
+  font-size: 15px;
+}
+
+.input {
+  width: 100%;
+  background-color: aliceblue;
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+  background-color: aqua;
+
+}
+
+.input-style {
+  background-color: #f5f5f5;
+  width: 100%;
+  padding: 12px;
+  margin-left: 1rem;
+  box-sizing: border-box;
+  border: 1px solid #f5f5f5;
+  border-radius: 10px;
+  color: red;
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+}
