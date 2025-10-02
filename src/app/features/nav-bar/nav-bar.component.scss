@@ -1,0 +1,23 @@
+.container{
+    background-color: white;
+    margin: 0;
+    padding: 1rem 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+
+.container li{
+    list-style: none;
+}
+
+.container li a{ 
+    font-family: sans-serif;
+    font-weight: 700;
+    color: black;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 1rem;
+}
