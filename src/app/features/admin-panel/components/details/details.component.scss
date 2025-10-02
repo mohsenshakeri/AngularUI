@@ -1,18 +1,15 @@
 .details-body{
-    background-color: pink;
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    padding: 1rem 0;
-    gap: 55%;
+  justify-content: space-between;
+  width: 100%;
+  display:inline-flex;
+  align-items: center;
+  padding: 1rem 0 2rem 0;
 }
 
 .toggle-container {
-    display: flex;
-    align-items: center;
-    font-family: Arial, sans-serif;
+  display: flex;
+  align-items: center;
+  font-family: Arial, sans-serif;
 }
 
 
@@ -52,23 +49,14 @@ input:checked + .slider::before {
 }
 
 .text{
-    font-size: 15px;
+  font-size: 15px;
 }
 
-@media (max-width : 950px) {
-    .details-body{
-        gap: 25%;
-    }
-    .text{
-        font-size: 15px;
-    }
+.link{
+  cursor: pointer;
+  color: #08D394;
+  text-decoration: none;
+  font-family: Arial, sans-serif;
+  font-size: 15px;
 }
 
-@media (max-width : 650px) {
-    .details-body{
-        gap: 15%;
-    }
-    .toggle-container{
-        
-    }
-}
