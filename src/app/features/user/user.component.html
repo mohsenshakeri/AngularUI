@@ -1,1 +1,25 @@
-<p>user works!</p>
+<ul class="user-list">
+    <li class="users-item">
+        <div style="gap: 1rem; display: flex; align-items: center; justify-content: center;">
+           <input type="checkbox">
+           <span>User Name</span>
+        </div>
+        <span>Booking Date</span>
+        <span>Trip ID</span>
+        <span>Destination</span>
+        <span>Category</span>
+        <span>Amount Paid</span>
+    </li>
+    <li *ngFor="let item of items" class="users-item">
+        <div>
+            <input type="checkbox">
+            <img [src]="item.image" [alt]="item.id" class="user-img">
+            <span>{{item.name}}</span>
+        </div>
+        <span>{{item.bookingDate}}</span>
+        <span>{{item.tripID}}</span>
+        <span>{{item.destination}}</span>
+        <span>{{item.category}}</span>
+        <span>{{item.amount}}</span>
+    </li>
+</ul>

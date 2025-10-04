@@ -1,16 +1,21 @@
+.container {
+  background-color: #08d394;
+  width: 100vw;
+  height: calc(100vh - 50px);
+  padding: 1rem 0;
+}
+
 .header {
+  position: relative;
   align-items: center;
   background-color: white;
-  padding: 42px 58px 25px 58px;
+  padding: 3rem;
   border-radius: 32px;
-  max-width: 353px;
-  max-height: 643;
+  max-width: 30%;
   background-color: #ffffff;
-  position: absolute;
-  z-index: -1;
   top: 50%;
   left: 50%;
-  transform: translate(-50%,-50%);
+  transform: translate(-50%, -50%);
 }
 
 .sign-in {
@@ -20,7 +25,7 @@
   border: none;
   border-radius: 7.97px;
   color: balck;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 400;
 }
 
@@ -30,7 +35,7 @@
 }
 
 .bottom-link span {
-  padding: 1rem 0;
+  padding: 1rem 0 0 0 ;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -47,7 +52,7 @@
 }
 
 @media (max-width: 650px) {
-  .header{
+  .header {
     max-width: 453px;
   }
 }
