@@ -1,0 +1,151 @@
+.wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  overflow: hidden;
+  width: 100%;
+  align-items: center;
+  padding: 0;
+}
+
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.header {
+  width: 328px;
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  align-items: center;
+  padding: 3rem;
+}
+//----------- travel image ------------
+.image-home-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+
+}
+
+.image-wraper {
+  width: 100%;
+
+  // background: red;
+  //height: 100vh;
+  height: 95vh;
+  padding-right: 2rem;
+}
+.home-img {
+  object-fit: cover;
+  border: none;
+  border-radius: 24px;
+  // width: 100%;
+  // aspect-ratio: 4/4;
+  //max-width: 66;
+  // max-height: 664px;
+  height: 100%;
+  width: 100%;
+}
+ //------- logo visitiran ----------
+.logo {
+  display: flex;
+  justify-content: center;
+  width: 192px;
+  height: 30px;
+}
+.logo-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+//----------- sign in  button --------------
+.sign-in {
+  background-color: #08d394;
+  width: 100%;
+  padding: 10.63px 0;
+  border: none;
+  border-radius: 7.97px;
+  color: balck;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.sign-in:hover {
+  background-color: cornflowerblue;
+  cursor: pointer;
+}
+
+.bottom-link span {
+  padding: 1rem 0 0 0 ;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 15px;
+  font-weight: 500;
+  font-family: sans-serif;
+}
+
+.bottom-link span a {
+  color: #08d394;
+
+  text-decoration: none;
+}
+
+
+// ----------- or ----------------
+.divider {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #888; 
+  margin: 20px 0;
+}
+
+.divider::before,
+.divider::after {
+  width: 145px;
+  content: "";
+  flex: 1;
+  border-bottom: 1px solid #ccc; 
+}
+
+.divider:not(:empty)::before {
+  margin-right: 10px;
+}
+
+.divider:not(:empty)::after {
+  margin-left: 10px;
+}
+
+
+@media (max-width: 1024px) {
+  .wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .sign-in {
+    font-size: 15px;
+    font-weight: 500;
+  }
+  .image-home-container{
+    display: none;
+  }
+  .home-img {
+    display: none;
+  }
+}
+

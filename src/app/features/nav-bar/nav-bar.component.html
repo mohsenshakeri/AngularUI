@@ -1,11 +1,11 @@
 <ul class="container">
-    <li>
-      <a href="">Home</a>
-    </li>
-    <li>
-      <a href="http://localhost:4200/adminpanel">Login</a>
-    </li>
-    <li>
-      <a href="">User</a>
-    </li>
+  <li>
+    <a routerLink="">Home</a>
+  </li>
+  <li (click)="hideNav()">
+    <a routerLink="/login">Login</a>
+  </li>
+  <li (click)="hideNav()">
+    <a routerLink="/user">User</a>
+  </li>
 </ul>

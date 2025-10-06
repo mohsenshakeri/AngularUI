@@ -12,12 +12,22 @@ import { UserComponent } from './features/user/user.component';
 
 import { ComponentsComponent } from './features/user/components/components.component';
 
-import { UserListComponent } from './features/user/components/user-list/user-list.component';
+
 import { NavBarComponent } from './features/nav-bar/nav-bar.component';
 
+
+import { FormsModule } from '@angular/forms';
+import { SignUpComponent } from './features/sign-up/sign-up.component';
+import { SignUpEmailComponent } from './features/sign-up-email/sign-up-email.component';
+import { ButtonDetailsComponent } from './features/sign-up-email/button-details/button-details.component';
+
+import { RecaptchaModule } from 'ng-recaptcha';
+import { Error404Component } from './features/error404/error404.component';
+
 @NgModule({
-  declarations: [App, AdminPanelComponent, InputBoxsComponent, DetailsComponent, SigninButtonComponent, UserComponent, UserListComponent, ComponentsComponent, NavBarComponent],
-  imports: [BrowserModule, AppRoutingModule],
+  declarations: [App, AdminPanelComponent, InputBoxsComponent, DetailsComponent, SigninButtonComponent,
+     UserComponent, NavBarComponent, SignUpComponent, SignUpEmailComponent, ButtonDetailsComponent, Error404Component],
+  imports: [BrowserModule, AppRoutingModule, FormsModule, RecaptchaModule],
   providers: [provideBrowserGlobalErrorListeners()],
   bootstrap: [App],
 })

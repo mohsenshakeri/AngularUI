@@ -3,7 +3,7 @@
   width: 100%;
   display:inline-flex;
   align-items: center;
-  padding: 1rem 0 2rem 0;
+  padding: 0.5rem 0 1rem 0;
 }
 
 .toggle-container {
@@ -62,4 +62,3 @@ input:checked + .slider::before {
   font-size: 15px;
   font-family: sans-serif;
 }
-

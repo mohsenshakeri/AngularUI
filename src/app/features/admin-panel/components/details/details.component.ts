@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-details',
@@ -8,4 +8,10 @@ import { Component } from '@angular/core';
 })
 export class DetailsComponent {
 
+  @Output() showForm=new EventEmitter<boolean>();
+  show :boolean=false;
+  showPage(){
+    this.show=true
+    this.showForm.emit(true)
+  }
 }

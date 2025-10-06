@@ -22,14 +22,19 @@
 }
 
 .input-style {
-  background-color: #EDF5F2;
-  width: 100%;
+  background-color: white;
+  width: 328px;
   padding: 12px;
   box-sizing: border-box;
-  border: 0.66px solid #D4D7E3;
-  border-radius: 7.97px;
+  border: 0.66px solid #DCE3E0;
+  border-radius: 8px;
   color: #a1aca8;
   display: flex;
   align-items: center;
   font-size: 14px;
+}
+
+.input-style:focus{
+  outline: #ACE3CF;
+  border-color: #ACE3CF;
 }

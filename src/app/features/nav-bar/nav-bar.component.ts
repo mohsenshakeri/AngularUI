@@ -7,5 +7,8 @@ import { Component } from '@angular/core';
   styleUrl: './nav-bar.component.scss'
 })
 export class NavBarComponent {
-
+  showNav : boolean = true;
+  hideNav(){
+    this.showNav = false;
+  }
 }

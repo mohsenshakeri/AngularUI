@@ -1,41 +1,98 @@
+//table css
 .user-list{
     display: flex;
     flex-direction: column;
-
     align-items: center;
     justify-content: center;
     gap: 1rem;
+    padding: 0.5rem 0 1rem 0;
 }
 
-.user-list li{
+.user-list tr{
+    padding: 0.75rem;
     border: 0.5px solid #E3E9EE;
     border-radius: 5px;
     font-family: sans-serif;
     font-size: 16px;
-    padding: 1rem;
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns:  300px 100px 100px 100px 100px 100px;
     align-items: center;
-    width: 80%;
+    text-align: center;
     list-style: none;
-    background-color: #FFFFFF;
+    background-color: #ffffff;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
 }
 
-.user-list li div{
+.user-list tr:hover{
+    background-color: #EFEFEF;
+}
+
+.user-list tr .details{
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: left;
     gap: 1rem;
 }
 
-.user-list li div input{
+.user-list tr .details input{
     cursor: pointer;
 }
 
 .user-img{
-    width: 40px;
-    height: 40px;
-    border: none;
+
+    width: 32px;
+    overflow: hidden;
     border-radius: 50%;
+    border: none;
+    overflow: hidden;
+}
+
+@media (max-width : 950px) {
+    .user-list tr{
+    display: grid;
+    grid-template-columns:  200px 80px 80px 80px 80px 80px;
+    align-items: center;
+    text-align: center;
+}
+}
+
+//search box css
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    padding: 1rem 0;
+    gap: 0.5rem;
+    width: 80%;  
+}
+
+.input{
+    width: 254;
+    height: 40px;
+    padding: 0 10px;
+    outline: none;
+    border-radius: 8px;
+    border: 0.15px solid #bababa;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    gap: 0.5rem;
+}
+
+.container button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    height: 40px;
+    cursor: pointer;
+    gap: 8px;
+    background-color: white;
+    border-radius: 8px;
+    border: 0.15px solid #bababa;
+}
+
+.container button span{
+    font-family: sans-serif;
 }

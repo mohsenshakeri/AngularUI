@@ -1,13 +1,295 @@
-<div class="container">
-  <div class="header">
-    <img src="assets/visitiran.png" style="width: 114px; height: 18px; margin-bottom: 20px;"/>
-    <h1 style="font-family: sans-serif; font-size: 25px; font-weight: bold;">Login</h1>
-    <app-input-boxs></app-input-boxs>
-    <app-details></app-details>
-    <button type="button" class="sign-in">Sign in</button>
-    <app-signin-button></app-signin-button>
-    <div class="bottom-link">
-      <span>Don't you have an account?  <a href=""> Sign up now</a></span>
+<div class="wrapper">
+  <div class="container">
+    <div class="header">
+      <div class="logo-container">
+        <img src="assets/visitiran.png" class="logo" />
+      </div>
+      <h1>Login</h1>
+      <app-signin-button></app-signin-button>
+      <div class="divider">
+        <span style="font-family: sans-serif">Or</span>
+      </div>
+      <app-input-boxs></app-input-boxs>
+      <app-details
+        (showForm)="showMainForm($event)"
+        style="width: 100%"
+      ></app-details>
+      <button type="button" class="sign-in">Login with email</button>
+      <div class="bottom-link">
+        <span
+          >Don't you have an account?
+          <a routerLink="/signup"> Sign up now</a></span
+        >
+      </div>
+    </div>
+  </div>
+  <div class="image-home-container">
+    <div class="image-wraper">
+      <img src="assets/travel2.jpg" alt="" class="home-img" />
+    </div>
+  </div>
+  <!-- forgot password -->
+  <div
+    [ngStyle]="{ display: show ? 'block' : 'none' }"
+    class="forgot-password-container"
+  >
+    <div class="background-blur"></div>
+    <div class="forgot-card">
+      <div
+        style="
+          width: 25px;
+          height: 25px;
+          background-color: white;
+          z-index: 1000;
+          position: absolute;
+          cursor: pointer;
+          top: 15px;
+          right: 15px;
+        "
+        (click)="hideMainForm()"
+      >
+        <img
+          src="assets/close-button.svg"
+          alt=""
+          style="float: right; right: 30px"
+        />
+      </div>
+      <div class="card-details">
+        <span
+          style="
+            font-family: sans-serif;
+            font-size: 22px;
+            font-weight: 500;
+            color: #0d0d0d;
+          "
+          >Forgot Password</span
+        >
+        <div
+          style="
+            text-align: center;
+            font-family: sans-serif;
+            font-size: 14px;
+            width: 280px;
+            height: 63px;
+            color: #656565;
+          "
+        >
+          Enter the email address thet associated with your account. We will
+          send you an 4-digits code to reset your password.
+        </div>
+        <input
+          type="email"
+          placeholder="Example@gmail.com"
+          style="
+            background-color: #edf5f2;
+            padding: 12px;
+            box-sizing: border-box;
+            border: none;
+            border-radius: 7.97px;
+            color: #a1aca8;
+            display: flex;
+            align-items: center;
+            width: 352px;
+            outline: none;
+          "
+        />
+        <button
+          type="button"
+          style="
+            background-color: #08d394;
+            color: white;
+            border-radius: 8px;
+            align-items: center;
+            padding: 10px 15px;
+            border: none;
+            cursor: pointer;
+          "
+          (click)="showEnterCode()"
+        >
+          Get the code
+        </button>
+      </div>
+    </div>
+  </div>
+  <!-- enter code -->
+  <div
+    [ngStyle]="{ display: EnterCode ? 'block' : 'none' }"
+    class="forgot-password-container"
+  >
+    <div class="background-blur"></div>
+    <div class="forgot-card">
+      <div
+        style="
+          width: 25px;
+          height: 25px;
+          background-color: white;
+          z-index: 1000;
+          position: absolute;
+          cursor: pointer;
+          top: 15px;
+          right: 15px;
+        "
+        (click)="hideEnterCode()"
+      >
+        <img
+          src="assets/close-button.svg"
+          alt=""
+          style="float: right; right: 30px"
+        />
+      </div>
+      <div class="card-details">
+        <span
+          style="
+            font-family: sans-serif;
+            font-size: 22px;
+            font-weight: 500;
+            color: #0d0d0d;
+          "
+          >Enter Code</span
+        >
+        <div
+          style="
+            text-align: center;
+            font-family: sans-serif;
+            font-size: 14px;
+            width: 244px;
+            color: #656565;
+          "
+        >
+          Enter the code we just sent you on your email address.
+        </div>
+        <div class="otp-boxes" style="display: flex; gap: 0.5rem">
+          <input
+            *ngFor="let item of otpArray; let i = index"
+            type="text"
+            maxlength="1"
+            class="otp-input"
+            [(ngModel)]="otp[i]"
+            (keyup)="moveFocus($event, i)"
+          />
+        </div>
+        <button
+          type="button"
+          style="
+            background-color: #08d394;
+            color: white;
+            border-radius: 8px;
+            align-items: center;
+            padding: 15px 50px;
+            border: none;
+            cursor: pointer;
+            font-weight: 20px;
+            font-family: sans-serif;
+          "
+          (click)="showResetPassword()"
+        >
+          Submit
+        </button>
+        <div style="font-size: 16px; font-family: sans-serif; color: #556065">
+          Didn’t get the code?
+          <a
+            href=""
+            style="text-decoration: none; color: black; font-weight: bold"
+            >Resend</a
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- reset password -->
+  <div
+    [ngStyle]="{ display: resetPassword ? 'block' : 'none' }"
+    class="forgot-password-container"
+  >
+    <div class="background-blur"></div>
+    <div class="forgot-card">
+      <div
+        style="
+          width: 25px;
+          height: 25px;
+          background-color: white;
+          z-index: 1000;
+          position: absolute;
+          cursor: pointer;
+          top: 15px;
+          right: 15px;
+        "
+        (click)="hideResetPassword()"
+      >
+        <img
+          src="assets/close-button.svg"
+          alt=""
+          style="float: right; right: 30px"
+        />
+      </div>
+      <div class="card-details">
+        <span
+          style="
+            font-family: sans-serif;
+            font-size: 22px;
+            font-weight: 500;
+            color: #0d0d0d;
+          "
+          >Reset Password</span
+        >
+        <div
+          style="
+            text-align: center;
+            font-family: sans-serif;
+            font-size: 14px;
+            color: #556065;
+          "
+        >
+          Create your new password below.
+        </div>
+        <input
+          type="email"
+          placeholder="New Password"
+          style="
+            background-color: #edf5f2;
+            padding: 12px;
+            box-sizing: border-box;
+            border: none;
+            border-radius: 7.97px;
+            color: #a1aca8;
+            display: flex;
+            align-items: center;
+            width: 352px;
+            outline: none;
+          "
+        />
+        <input
+          type="email"
+          placeholder="Confirm Password"
+          style="
+            background-color: #edf5f2;
+            padding: 12px;
+            box-sizing: border-box;
+            border: none;
+            border-radius: 7.97px;
+            color: #a1aca8;
+            display: flex;
+            align-items: center;
+            width: 352px;
+            outline: none;
+          "
+        />
+        <button
+          type="button"
+          style="
+            background-color: #08d394;
+            color: white;
+            border-radius: 6px;
+            align-items: center;
+            padding: 10px 50px;
+            border: none;
+            cursor: pointer;
+          "
+          (click)="hideResetPassword()"
+        >
+          Reset
+        </button>
+      </div>
     </div>
   </div>
 </div>

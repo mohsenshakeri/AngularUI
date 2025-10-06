@@ -1,25 +1,41 @@
-<ul class="user-list">
-    <li class="users-item">
-        <div style="gap: 1rem; display: flex; align-items: center; justify-content: center;">
+
+
+<div style="width: 100vw; align-items: center;
+justify-content: center; display: flex;">
+    <div class="container">
+        <div class="input">
+            <img src="assets/searchicon.svg" alt="" style="cursor: pointer;">
+            <input type="search" placeholder="Search in the cards..." style="outline: none; border: none;" [(ngModel)]="userName" (input)="searchUser()">
+        </div>
+        <button type="button" (click)="searchUser()">
+            <img src="assets/filter.svg" alt="">
+            <span>Filter</span>
+        </button>
+    </div>
+</div>
+
+<table class="user-list">
+    <tr class="users-item" style="background-color: #EFEFEF;">
+        <td style="gap: 1rem; display: flex; align-items: center; justify-content: left;">
            <input type="checkbox">
            <span>User Name</span>
-        </div>
-        <span>Booking Date</span>
-        <span>Trip ID</span>
-        <span>Destination</span>
-        <span>Category</span>
-        <span>Amount Paid</span>
-    </li>
-    <li *ngFor="let item of items" class="users-item">
-        <div>
+        </td>
+        <td>Booking Date</td>
+        <td>Trip ID</td>
+        <td>Destination</td>
+        <td>Category</td>
+        <td>Amount Paid</td>
+    </tr>
+    <tr *ngFor="let item of users" class="users-item">
+        <td class="details">
             <input type="checkbox">
             <img [src]="item.image" [alt]="item.id" class="user-img">
             <span>{{item.name}}</span>
-        </div>
-        <span>{{item.bookingDate}}</span>
-        <span>{{item.tripID}}</span>
-        <span>{{item.destination}}</span>
-        <span>{{item.category}}</span>
-        <span>{{item.amount}}</span>
-    </li>
-</ul>
+        </td>
+        <td>{{item.bookingDate}}</td>
+        <td>{{item.tripID}}</td>
+        <td>{{item.destination}}</td>
+        <td>{{item.category}}</td>
+        <td>{{item.amount}}</td>
+    </tr>
+</table>
