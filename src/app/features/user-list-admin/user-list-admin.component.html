@@ -1,0 +1,41 @@
+<div class="wrapper">
+    <div>Users List</div>
+
+    <div style="width: 100vw; align-items: center;
+    justify-content: center; display: flex;">
+       <div class="container">
+            <div class="input">
+                <img src="assets/searchicon.svg" alt="" style="cursor: pointer;">
+                <input type="search" placeholder="Search in the cards..." style="outline: none; border: none;" [(ngModel)]="userName" (input)="searchUser()">
+            </div>
+        </div>
+    </div>
+
+    <table class="user-list">
+        <tr style="background-color: #EFEFEF;">
+            <td class="head">User Name</td>
+            <td>User ID</td>
+            <td>Email</td>
+            <td>Role</td>
+            <td>Status</td>
+            <td>Joined Date</td>
+        </tr>
+        <div class="users-item">
+            <tr *ngFor="let item of users">
+                <td class="details" (click)="showPersonalDetails(item.id)">
+                    <img [src]="item.image" [alt]="item.id" class="user-img">
+                    <span>{{item.userName}}</span>
+                </td>
+                <td>{{item.userID}}</td>
+                <td>{{item.email}}</td>
+                <td>{{item.role}}</td>
+                <td>{{item.statusUser}}</td>
+                <td>{{item.joinedDate}}</td>
+            </tr>
+        </div>
+    </table>
+    <!--------- Personal Details --------->
+    <div [ngStyle]="{ display: show ? 'block' : 'none' }" class="personal-wrapper">
+
+    </div>
+</div>

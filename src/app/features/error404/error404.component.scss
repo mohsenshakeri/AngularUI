@@ -1,52 +1,91 @@
-/* Frame 36731 */
-.frame{
-    position: relative;
-    width: 1440px;
-    height: 812px;
+.wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin: 0;
+    height: 100vh;
 }
 
-/*.digit-4{
-    position: absolute;
-    visibility: hidden;
-    width: 313.2px;
-    height: 361.95px;
-    left: 270px;
-    top: 258px;
-    font-family: 'Poppins';
-    font-style: normal;
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 4rem;
+}
+//-------- 404 image ----------
+.image{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1062px;
+    width: 80%;
+}
+.image img{
+    width: 100%;
+}
+
+.text{
+    font-size: 32px;
+    font-family: sans-serif;
+    font-weight: 500;
+    max-width: 1062px;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #000000;
+}
+
+.container button{
+    background-color: #08D394;
+    border: none;
+    text-align: center;
+    padding: 10px 14px;
+    border-radius: 32px;
+    cursor: pointer;
+}
+
+.container button a{
+    color: #FFFFFF;
+    font-size: 16px;
+    font-family: sans-serif;
     font-weight: 600;
-    font-size: 480px;
-    line-height: 28px;
+    text-decoration: none;
 }
 
-.img454{
-    position: absolute;
-    width: 61px;
-    height: 62px;
-    left: 177px;
-    top: 231px;
-    border-radius: 8px;
-}*/
 
-.img437{
-    position: absolute;
-    width: 84px;
-    height: 56px;
-    left: 170px;
-    top: 0px;
-
-    background: url(image.png);
-    opacity: 0.8;
-    border-radius: 8px;
+@media (max-width: 1024px) {
+    .container{
+        gap: 3rem;
+    }
+    .text{
+        font-size: 22px;
+    }
 }
 
-.img442{
-position: absolute;
-width: 72px;
-height: 44px;
-left: 185px;
-top: 184px;
+@media (max-width: 768px) {
+    .container{
+        gap: 2rem;
+    }
+    .image{
+        width: 90%;
+    }
+    .text{
+        font-size: 18px;
+    }
+    .container button a{
+        font-size: 12px;
+    }
+}
 
-background: url(image.png);
-border-radius: 8px;
+@media (max-width: 576px) {
+    .text{
+        font-size: 14px;
+    }
+    .container button a{
+        font-size: 12px;
+    }
 }

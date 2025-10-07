@@ -23,10 +23,11 @@ import { ButtonDetailsComponent } from './features/sign-up-email/button-details/
 
 import { RecaptchaModule } from 'ng-recaptcha';
 import { Error404Component } from './features/error404/error404.component';
+import { UserListAdminComponent } from './features/user-list-admin/user-list-admin.component';
 
 @NgModule({
   declarations: [App, AdminPanelComponent, InputBoxsComponent, DetailsComponent, SigninButtonComponent,
-     UserComponent, NavBarComponent, SignUpComponent, SignUpEmailComponent, ButtonDetailsComponent, Error404Component],
+     UserComponent, NavBarComponent, SignUpComponent, SignUpEmailComponent, ButtonDetailsComponent, Error404Component, UserListAdminComponent],
   imports: [BrowserModule, AppRoutingModule, FormsModule, RecaptchaModule],
   providers: [provideBrowserGlobalErrorListeners()],
   bootstrap: [App],

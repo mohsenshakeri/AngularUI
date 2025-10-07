@@ -35,77 +35,17 @@
   >
     <div class="background-blur"></div>
     <div class="forgot-card">
-      <div
-        style="
-          width: 25px;
-          height: 25px;
-          background-color: white;
-          z-index: 1000;
-          position: absolute;
-          cursor: pointer;
-          top: 15px;
-          right: 15px;
-        "
-        (click)="hideMainForm()"
-      >
-        <img
-          src="assets/close-button.svg"
-          alt=""
-          style="float: right; right: 30px"
-        />
+      <div (click)="hideMainForm()" class="close">
+        <img src="assets/close-button.svg" alt=""/>
       </div>
       <div class="card-details">
-        <span
-          style="
-            font-family: sans-serif;
-            font-size: 22px;
-            font-weight: 500;
-            color: #0d0d0d;
-          "
-          >Forgot Password</span
-        >
-        <div
-          style="
-            text-align: center;
-            font-family: sans-serif;
-            font-size: 14px;
-            width: 280px;
-            height: 63px;
-            color: #656565;
-          "
-        >
+        <span class="title">Forgot Password</span>
+        <div class="text">
           Enter the email address thet associated with your account. We will
           send you an 4-digits code to reset your password.
         </div>
-        <input
-          type="email"
-          placeholder="Example@gmail.com"
-          style="
-            background-color: #edf5f2;
-            padding: 12px;
-            box-sizing: border-box;
-            border: none;
-            border-radius: 7.97px;
-            color: #a1aca8;
-            display: flex;
-            align-items: center;
-            width: 352px;
-            outline: none;
-          "
-        />
-        <button
-          type="button"
-          style="
-            background-color: #08d394;
-            color: white;
-            border-radius: 8px;
-            align-items: center;
-            padding: 10px 15px;
-            border: none;
-            cursor: pointer;
-          "
-          (click)="showEnterCode()"
-        >
+        <input type="email" placeholder="Example@gmail.com" class="forgot-input"/>
+        <button type="button" (click)="showEnterCode()" class="get-code-button">
           Get the code
         </button>
       </div>
@@ -118,44 +58,12 @@
   >
     <div class="background-blur"></div>
     <div class="forgot-card">
-      <div
-        style="
-          width: 25px;
-          height: 25px;
-          background-color: white;
-          z-index: 1000;
-          position: absolute;
-          cursor: pointer;
-          top: 15px;
-          right: 15px;
-        "
-        (click)="hideEnterCode()"
-      >
-        <img
-          src="assets/close-button.svg"
-          alt=""
-          style="float: right; right: 30px"
-        />
+      <div class="close" (click)="hideEnterCode()">
+        <img src="assets/close-button.svg" alt=""/>
       </div>
       <div class="card-details">
-        <span
-          style="
-            font-family: sans-serif;
-            font-size: 22px;
-            font-weight: 500;
-            color: #0d0d0d;
-          "
-          >Enter Code</span
-        >
-        <div
-          style="
-            text-align: center;
-            font-family: sans-serif;
-            font-size: 14px;
-            width: 244px;
-            color: #656565;
-          "
-        >
+        <span class="title">Enter Code</span>
+        <div class="text">
           Enter the code we just sent you on your email address.
         </div>
         <div class="otp-boxes" style="display: flex; gap: 0.5rem">
@@ -168,30 +76,10 @@
             (keyup)="moveFocus($event, i)"
           />
         </div>
-        <button
-          type="button"
-          style="
-            background-color: #08d394;
-            color: white;
-            border-radius: 8px;
-            align-items: center;
-            padding: 15px 50px;
-            border: none;
-            cursor: pointer;
-            font-weight: 20px;
-            font-family: sans-serif;
-          "
-          (click)="showResetPassword()"
-        >
-          Submit
-        </button>
-        <div style="font-size: 16px; font-family: sans-serif; color: #556065">
+        <button type="button" (click)="showResetPassword()" class="submit-button">Submit</button>
+        <div class="resend">
           Didn’t get the code?
-          <a
-            href=""
-            style="text-decoration: none; color: black; font-weight: bold"
-            >Resend</a
-          >
+          <a href="">Resend</a>
         </div>
       </div>
     </div>
@@ -203,19 +91,7 @@
   >
     <div class="background-blur"></div>
     <div class="forgot-card">
-      <div
-        style="
-          width: 25px;
-          height: 25px;
-          background-color: white;
-          z-index: 1000;
-          position: absolute;
-          cursor: pointer;
-          top: 15px;
-          right: 15px;
-        "
-        (click)="hideResetPassword()"
-      >
+      <div class="close" (click)="hideResetPassword()">
         <img
           src="assets/close-button.svg"
           alt=""
@@ -223,71 +99,14 @@
         />
       </div>
       <div class="card-details">
-        <span
-          style="
-            font-family: sans-serif;
-            font-size: 22px;
-            font-weight: 500;
-            color: #0d0d0d;
-          "
-          >Reset Password</span
-        >
-        <div
-          style="
-            text-align: center;
-            font-family: sans-serif;
-            font-size: 14px;
-            color: #556065;
-          "
-        >
+        <span class="title">Reset Password</span>
+        <div class="text">
           Create your new password below.
         </div>
-        <input
-          type="email"
-          placeholder="New Password"
-          style="
-            background-color: #edf5f2;
-            padding: 12px;
-            box-sizing: border-box;
-            border: none;
-            border-radius: 7.97px;
-            color: #a1aca8;
-            display: flex;
-            align-items: center;
-            width: 352px;
-            outline: none;
-          "
-        />
-        <input
-          type="email"
-          placeholder="Confirm Password"
-          style="
-            background-color: #edf5f2;
-            padding: 12px;
-            box-sizing: border-box;
-            border: none;
-            border-radius: 7.97px;
-            color: #a1aca8;
-            display: flex;
-            align-items: center;
-            width: 352px;
-            outline: none;
-          "
-        />
-        <button
-          type="button"
-          style="
-            background-color: #08d394;
-            color: white;
-            border-radius: 6px;
-            align-items: center;
-            padding: 10px 50px;
-            border: none;
-            cursor: pointer;
-          "
-          (click)="hideResetPassword()"
-        >
-          Reset
+        <input type="email" placeholder="New Password" class="new-password-input"/>
+        <input type="email" placeholder="Confirm Password" class="confirm-password-input"/>
+        <button class="reset-button"
+          type="button" (click)="hideResetPassword()">Reset
         </button>
       </div>
     </div>
