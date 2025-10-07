@@ -1,12 +1,20 @@
 <div class="wrapper">
-    <div>Users List</div>
+    <div class="wrapper-title">Users List</div>
+    <div class="tabs-container">
+    <!-- Tabs -->
+        <div class="tabs">
+            <button [class.active]="activeTab === 'active'" class="tab" (click)="filterByStatus('Active')">Active</button>
 
-    <div style="width: 100vw; align-items: center;
-    justify-content: center; display: flex;">
-       <div class="container">
-            <div class="input">
-                <img src="assets/searchicon.svg" alt="" style="cursor: pointer;">
-                <input type="search" placeholder="Search in the cards..." style="outline: none; border: none;" [(ngModel)]="userName" (input)="searchUser()">
+            <button [class.active]="activeTab === 'inactive'" class="tab" (click)="filterByStatus('Pending')">Inactive</button>
+
+            <button [class.active]="activeTab === 'banned'" class="tab" (click)="filterByStatus('Banned')">Banned</button>
+        </div>
+        <div style="width: 100vw; align-items: center; justify-content: right; display: flex;">
+            <div class="container">
+                <div class="input">
+                    <img src="assets/searchicon.svg" alt="" style="cursor: pointer;">
+                    <input type="search" placeholder="Search in the cards..." style="outline: none; border: none;" [(ngModel)]="userStr" (input)="search()">
+                </div>
             </div>
         </div>
     </div>
@@ -21,7 +29,7 @@
             <td>Joined Date</td>
         </tr>
         <div class="users-item">
-            <tr *ngFor="let item of users">
+            <tr *ngFor="let item of showTab">
                 <td class="details" (click)="showPersonalDetails(item.id)">
                     <img [src]="item.image" [alt]="item.id" class="user-img">
                     <span>{{item.userName}}</span>
@@ -36,6 +44,50 @@
     </table>
     <!--------- Personal Details --------->
     <div [ngStyle]="{ display: show ? 'block' : 'none' }" class="personal-wrapper">
+        <button class="back-button" (click)="show = false">
+            <img src="assets/arrow_back.svg" alt="">
+            <span>Back</span>
+        </button>
+        <div class="personal-card">
+            <div class="personal-card-title">Personal Details</div>
+            <div class="personal-card-details">
+                <div class="personal-card-image">
+                    <img [src]="userDetails[index].img" alt="">
+                </div>
+                <div class="personal-card-text">
+                    <span class="text1">Full Name:</span>
+                    <span class="text2">{{userDetails[index].fullName}}</span>
+                    <span class="text1">Gender:</span>
+                    <span class="text2">{{userDetails[index].gender}}</span>
+                    <span class="text1">Role:</span>
+                    <span class="text2">{{userDetails[index].role}}</span>
+                    <span class="text1">Date Of Birth:</span>
+                    <span class="text2">{{userDetails[index].birthday}}</span>
+                </div>
+            </div>
+        </div>
 
+        <div style="display: flex; gap: 1rem; padding: 1rem;">
+            <div style="width: 242px; display: flex; flex-direction: column; gap: 1rem;">
+                <div class="personal-card-title">Address</div>
+                <div class="personal-card-text">
+                    <span class="text1">Full Name:</span>
+                    <span class="text2">{{userDetails[index].addressLine}}</span>
+                    <span class="text1">Gender:</span>
+                    <span class="text2">{{userDetails[index].city}}</span>
+                    <span class="text1">Role:</span>
+                    <span class="text2">{{userDetails[index].country}}</span>
+                </div>
+            </div>
+            <div style="display: flex; flex-direction: column; gap: 1rem;">
+                <div class="personal-card-title">Contact Details</div>
+                <div class="personal-card-text">
+                    <span class="text1">Phone:</span>
+                    <span class="text2">{{userDetails[index].phone}}</span>
+                    <span class="text1">Email:</span>
+                    <span class="text2">{{userDetails[index].email}}</span>
+                </div>
+           </div>
+        </div>
     </div>
 </div>

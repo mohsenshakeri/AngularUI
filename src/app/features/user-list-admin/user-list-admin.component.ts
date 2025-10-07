@@ -91,17 +91,19 @@ export class UserListAdminComponent {
   ];
 
 
-  users = [...this.userList];
-
-  userName: string='';
+  //users = [...this.userList];
+  activeTab = 'active';
+  showTab = [...this.userList];
+  userStr: string='';
   index : number=0;
-  searchUser(){
-    const term = this.userName.toLowerCase();
+  search(){
+    const term = this.userStr.toLowerCase();
 
-    if (this.userName.trim() !== '') {
-      return this.users = this.users.filter((i) => i.userName.toLowerCase().includes(term));
+    if (this.userStr.trim() !== '') {
+      this.showTab = this.userList.filter((i) => i.userName.toLowerCase().includes(term));
     }else{
-      return this.users=[...this.userList];
+      this.showTab=[...this.userList];
+      this.activeTab = 'active';
     }
   }
 
@@ -112,7 +114,12 @@ export class UserListAdminComponent {
       fullName : 'Hazel Pink',
       gender : 'Male',
       role : 'User',
-      birthday : 'March 15, 1992'
+      birthday : 'March 15, 1992',
+      addressLine : 'No 22, Valiasr Street',
+      city : 'Tehran',
+      country : 'Iran',
+      phone : '+98 912 345 6789',
+      email : 'Maryam@example.com'
     },
     {
       id : 2,
@@ -120,7 +127,12 @@ export class UserListAdminComponent {
       fullName : 'Hazel Pink',
       gender : 'Male',
       role : 'User',
-      birthday : 'March 15, 1992'
+      birthday : 'March 15, 1992',
+      addressLine : 'No 22, Valiasr Street',
+      city : 'Tehran',
+      country : 'Iran',
+      phone : '+98 912 345 6789',
+      email : 'Maryam@example.com'
     },
     {
       id : 3,
@@ -128,15 +140,25 @@ export class UserListAdminComponent {
       fullName : 'Hazel Pink',
       gender : 'Male',
       role : 'User',
-      birthday : 'March 15, 1992'
+      birthday : 'March 15, 1992',
+      addressLine : 'No 22, Valiasr Street',
+      city : 'Tehran',
+      country : 'Iran',
+      phone : '+98 912 345 6789',
+      email : 'Maryam@example.com'
     },
-        {
+    {
       id : 4,
       img : 'assets/user-details/id4.jpg',
       fullName : 'Hazel Pink',
       gender : 'Male',
       role : 'User',
-      birthday : 'March 15, 1992'
+      birthday : 'March 15, 1992',
+      addressLine : 'No 22, Valiasr Street',
+      city : 'Tehran',
+      country : 'Iran',
+      phone : '+98 912 345 6789',
+      email : 'Maryam@example.com'
     },
     {
       id : 5,
@@ -144,7 +166,12 @@ export class UserListAdminComponent {
       fullName : 'Hazel Pink',
       gender : 'Male',
       role : 'User',
-      birthday : 'March 15, 1992'
+      birthday : 'March 15, 1992',
+      addressLine : 'No 22, Valiasr Street',
+      city : 'Tehran',
+      country : 'Iran',
+      phone : '+98 912 345 6789',
+      email : 'Maryam@example.com'
     },
     {
       id : 6,
@@ -152,7 +179,12 @@ export class UserListAdminComponent {
       fullName : 'Hazel Pink',
       gender : 'Male',
       role : 'User',
-      birthday : 'March 15, 1992'
+      birthday : 'March 15, 1992',
+      addressLine : 'No 22, Valiasr Street',
+      city : 'Tehran',
+      country : 'Iran',
+      phone : '+98 912 345 6789',
+      email : 'Maryam@example.com'
     },
     {
       id : 7,
@@ -160,7 +192,12 @@ export class UserListAdminComponent {
       fullName : 'Hazel Pink',
       gender : 'Male',
       role : 'User',
-      birthday : 'March 15, 1992'
+      birthday : 'March 15, 1992',
+      addressLine : 'No 22, Valiasr Street',
+      city : 'Tehran',
+      country : 'Iran',
+      phone : '+98 912 345 6789',
+      email : 'Maryam@example.com'
     },
     {
       id : 8,
@@ -168,14 +205,28 @@ export class UserListAdminComponent {
       fullName : 'Hazel Pink',
       gender : 'Male',
       role : 'User',
-      birthday : 'March 15, 1992'
+      birthday : 'March 15, 1992',
+      addressLine : 'No 22, Valiasr Street',
+      city : 'Tehran',
+      country : 'Iran',
+      phone : '+98 912 345 6789',
+      email : 'Maryam@example.com'
     },
   ];
   userDetails = [...this.personalDetails];
   show : boolean = false;
   showPersonalDetails(id : number){
-    this.index = id;
+    this.index = id-1;
     this.show = true;
   }
 
+  //----------- active tab ------------
+  filterByStatus(status: string) {
+    if (status === 'Active') this.activeTab = 'active';
+    else if (status === 'Pending') this.activeTab = 'inactive';
+    else if (status === 'Banned') this.activeTab = 'banned';
+
+    this.userStr = '';
+    this.showTab = this.userList.filter(u => u.statusUser === status);
+  }
 }
