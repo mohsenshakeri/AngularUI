@@ -96,6 +96,7 @@ export class UserListAdminComponent {
   showTab = [...this.userList];
   userStr: string='';
   index : number=0;
+  num: number = 1;
   search(){
     const term = this.userStr.toLowerCase();
 
@@ -228,5 +229,15 @@ export class UserListAdminComponent {
 
     this.userStr = '';
     this.showTab = this.userList.filter(u => u.statusUser === status);
+  }
+
+  //----------- increase and decrease -----------
+  increase(){
+    this.num = this.num + 1;
+  }
+  decrease(){
+    if (this.num != 1) {
+      this.num = this.num - 1;
+    }
   }
 }

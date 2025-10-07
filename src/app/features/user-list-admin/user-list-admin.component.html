@@ -37,11 +37,22 @@
                 <td>{{item.userID}}</td>
                 <td>{{item.email}}</td>
                 <td>{{item.role}}</td>
-                <td>{{item.statusUser}}</td>
+                <td [ngStyle]="{'color': item.statusUser === 'Active' ? '#388857' :
+                item.statusUser === 'Pending' ? '#FFA500' :
+                item.statusUser === 'Banned' ? '#A2181E' : 'black'}">{{item.statusUser}}</td>
                 <td>{{item.joinedDate}}</td>
             </tr>
         </div>
     </table>
+    <div style="display: flex; gap: 1rem; align-items: center; justify-content: center;">
+        <div (click)="decrease()" style="cursor: pointer;">
+            <img src="assets/back-button.png" alt="">
+        </div>
+        <div>{{num}}</div>
+        <div (click)="increase()" style="cursor: pointer;">
+            <img src="assets/next-button.png" alt="">
+        </div>
+    </div>
     <!--------- Personal Details --------->
     <div [ngStyle]="{ display: show ? 'block' : 'none' }" class="personal-wrapper">
         <button class="back-button" (click)="show = false">
