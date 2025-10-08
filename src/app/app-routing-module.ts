@@ -7,8 +7,12 @@ import { SignUpComponent } from './features/sign-up/sign-up.component';
 import { SignUpEmailComponent } from './features/sign-up-email/sign-up-email.component';
 import { Error404Component } from './features/error404/error404.component';
 import { UserListAdminComponent } from './features/user-list-admin/user-list-admin.component';
+import { UiballComponent } from './features/uiball/uiball.component';
+import { DetailItemComponent } from './features/detail-item/detail-item.component';
 
 const routes: Routes = [
+  { path: 'detailitem', component: DetailItemComponent},
+  { path: 'uiball', component: UiballComponent},
   { path: 'userlist', component: UserListAdminComponent },
   { path: '404', component: Error404Component },
   { path: 'user', component: UserComponent },

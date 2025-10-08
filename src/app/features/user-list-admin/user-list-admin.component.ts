@@ -95,8 +95,9 @@ export class UserListAdminComponent {
   activeTab = 'active';
   showTab = [...this.userList];
   userStr: string='';
-  index : number=0;
-  num: number = 1;
+  index : number = 0;
+  num: number = 1; // صفحه فعلی
+  usersPerPage = 3; // تعداد کاربر در هر صفحه
   search(){
     const term = this.userStr.toLowerCase();
 
@@ -214,8 +215,10 @@ export class UserListAdminComponent {
       email : 'Maryam@example.com'
     },
   ];
+
   userDetails = [...this.personalDetails];
   show : boolean = false;
+
   showPersonalDetails(id : number){
     this.index = id-1;
     this.show = true;
@@ -232,9 +235,11 @@ export class UserListAdminComponent {
   }
 
   //----------- increase and decrease -----------
+
   increase(){
     this.num = this.num + 1;
   }
+  
   decrease(){
     if (this.num != 1) {
       this.num = this.num - 1;

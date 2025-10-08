@@ -1,0 +1,55 @@
+.user-comment-container{
+    background-color: darkcyan;
+    width: 80%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 1rem;
+}
+
+.comment-card{
+    max-width: 521px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: antiquewhite;
+    gap: 0.5rem;
+}
+
+.card-head{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: 1rem;
+}
+
+.card-title{
+    display: flex;
+    gap: 0.5rem;
+    flex-direction: column;
+    align-items: center;
+    background-color: aqua;
+    text-align: left;
+    width: 100%;
+}
+
+.card-title span{
+    width: 100%;
+}
+
+.image{
+    width: 72px;
+    height: 72px;
+}
+
+.image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.text{
+    width: 100%;
+}

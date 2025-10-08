@@ -1,0 +1,14 @@
+<div *ngFor="let user of userComment" class="user-comment-container">
+    <div class="comment-card">
+        <div class="card-head">
+            <div class="image">
+                <img [src]="user.image" alt="">
+            </div>
+            <div class="card-title">
+                <span>{{user.name}}</span>
+                <span>{{user.date}}</span>
+            </div>
+        </div>
+        <div class="text">{{user.comment}}</div>
+    </div>
+</div>

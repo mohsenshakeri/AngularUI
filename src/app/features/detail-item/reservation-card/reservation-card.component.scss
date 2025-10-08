@@ -1,0 +1,90 @@
+.card-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #FFFFFF;
+    width: 412px;
+    padding: 1rem;
+    gap: 1rem;
+    border-radius: 10px;
+    box-shadow: 0px 0px 16px 0px rgba(194, 198, 204, 0.6);
+}
+
+.item1{
+    display: flex;
+    justify-content: left;
+    width: 100%;
+    color: #484848;
+    font-weight: 700;
+    font-family: sans-serif;
+    font-size: 21px;
+}
+
+.item2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    border-top: 1px solid #9A9A9A;
+    gap: 2rem;
+    padding: 2rem 0 0 0;
+}
+
+.reservation-button{
+    background-color: #4AA56D;
+    border: none;
+    width: 100%;
+    border-radius: 30px;
+    color: #FFFFFF;
+    padding: 1rem 0;
+    font-size: 15px;
+    font-weight: 700;
+    font-family: sans-serif;
+    cursor: pointer;
+}
+
+.item2-buttons{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.item2-buttons button{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    gap: 10px;
+    border: none;
+    background-color: #FFFFFF;
+    padding: 3px;
+    cursor: pointer;
+}
+
+.item2-buttons button span{
+    text-align: center;
+    color: #575F66;
+    font-size: 16px;
+    font-weight: 700;
+    font-family: sans-serif;
+}
+
+.item2-text{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 1rem;
+}
+
+.item2-text span{
+    text-align: left;
+    width: 100%;
+    color: #9A9A9A;
+    font-size: 16px;
+    font-weight: 500;
+    font-family: sans-serif;
+}

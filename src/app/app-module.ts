@@ -10,9 +10,6 @@ import { DetailsComponent } from './features/admin-panel/components/details/deta
 import { SigninButtonComponent } from './features/admin-panel/components/signin-button/signin-button.component';
 import { UserComponent } from './features/user/user.component';
 
-import { ComponentsComponent } from './features/user/components/components.component';
-
-
 import { NavBarComponent } from './features/nav-bar/nav-bar.component';
 
 
@@ -24,10 +21,23 @@ import { ButtonDetailsComponent } from './features/sign-up-email/button-details/
 import { RecaptchaModule } from 'ng-recaptcha';
 import { Error404Component } from './features/error404/error404.component';
 import { UserListAdminComponent } from './features/user-list-admin/user-list-admin.component';
+import { UiballComponent } from './features/uiball/uiball.component';
+import { DetailItemComponent } from './features/detail-item/detail-item.component';
+import { ImagesViewComponent } from './features/detail-item/images-view/images-view.component';
+import { ReservationCardComponent } from './features/detail-item/reservation-card/reservation-card.component';
+import { ModernApartmentComponent } from './features/detail-item/modern-apartment/modern-apartment.component';
+import { GhestServicesCardComponent } from './features/detail-item/ghest-services-card/ghest-services-card.component';
+import { SafetyCardComponent } from './features/detail-item/safety-card/safety-card.component';
+import { RateComponent } from './features/detail-item/rate/rate.component';
+import { UserCommentComponent } from './features/detail-item/user-comment/user-comment.component';
+import { StayUpdateComponent } from './features/detail-item/stay-update/stay-update.component';
 
 @NgModule({
   declarations: [App, AdminPanelComponent, InputBoxsComponent, DetailsComponent, SigninButtonComponent,
-     UserComponent, NavBarComponent, SignUpComponent, SignUpEmailComponent, ButtonDetailsComponent, Error404Component, UserListAdminComponent],
+     UserComponent, NavBarComponent, SignUpComponent, SignUpEmailComponent, ButtonDetailsComponent,
+      Error404Component, UserListAdminComponent, UiballComponent, DetailItemComponent, ImagesViewComponent,
+       ReservationCardComponent, ModernApartmentComponent, GhestServicesCardComponent, SafetyCardComponent,
+        RateComponent, UserCommentComponent, StayUpdateComponent],
   imports: [BrowserModule, AppRoutingModule, FormsModule, RecaptchaModule],
   providers: [provideBrowserGlobalErrorListeners()],
   bootstrap: [App],
