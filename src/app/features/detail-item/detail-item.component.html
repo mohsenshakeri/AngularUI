@@ -1,12 +1,23 @@
 
 <app-images-view></app-images-view>
-<div style="display: grid; grid-template-columns: 2fr 1fr; width: 100%; align-items: center;">
-    <app-modern-apartment></app-modern-apartment>
+<div class="apartment">
+    <div class="description">
+        <app-modern-apartment class="modern"></app-modern-apartment>
+        <app-apartment-description></app-apartment-description>
+    </div>
     <app-reservation-card style="display: flex; align-items: center; justify-content: center;"></app-reservation-card>
 </div>
+
 <app-ghest-services-card></app-ghest-services-card>
 <app-safety-card></app-safety-card>
-<img src="assets/map.png" alt="">
+<div class="google-map">
+    <img src="assets/map.png" alt="">
+</div>
 <app-rate></app-rate>
 <app-user-comment></app-user-comment>
 <app-stay-update></app-stay-update>
+<div class="info-footer-container">
+    <app-info-left-side class="item1"></app-info-left-side>
+    <app-info-options class="item2"></app-info-options>
+</div>
+<app-detail-item-footer></app-detail-item-footer>

@@ -1,0 +1,94 @@
+.google-map {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+
+}
+
+.google-map img {
+  max-width: 1284px;
+  width: 100%;
+  margin: 1rem 4rem;
+}
+
+.info-footer-container{
+
+  display: flex;
+  gap: 2rem;
+  //display: grid;
+  //grid-template-columns: 1fr 2fr;
+  margin: 2rem 4rem;
+}
+
+.item1{
+
+  max-width: 410px;
+}
+
+.item2{
+  width: 100%;
+}
+
+.apartment{
+  display: grid; 
+  grid-template-columns: 2fr 1fr; 
+  width: 100%; 
+  align-items: center; 
+  gap: 8rem;
+}
+
+.description{
+  display: flex; 
+  flex-direction: column; 
+  align-items: first baseline; 
+  gap: 1rem; 
+  width: 100%; 
+  //max-width: 846px; 
+  margin-left: 4rem; 
+  justify-content: center;
+}
+
+.modern{
+  width: 100%;
+}
+
+@media (max-width : 1324px) {
+  .apartment{
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width : 1024px) {
+  .google-map img{
+    margin: 1rem 2rem;
+  }
+  .info-footer-container{
+    display: flex;
+    flex-direction: column;
+    align-items: first baseline;
+    margin: 2rem 2rem;
+    gap: 2rem;
+  }
+  .item2 , .item1{
+    width: 100%;
+  }
+  .apartment{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 1rem;
+  }
+  .description{
+    margin: 0;
+  }
+}
+
+@media (max-width : 768px) {
+  .google-map img{
+    margin:  1rem 1rem;
+  }
+  .info-footer-container{
+    margin: 2rem 1rem;
+  }
+}

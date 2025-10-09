@@ -1,14 +1,21 @@
-<div *ngFor="let user of userComment" class="user-comment-container">
-    <div class="comment-card">
-        <div class="card-head">
-            <div class="image">
-                <img [src]="user.image" alt="">
-            </div>
-            <div class="card-title">
-                <span>{{user.name}}</span>
-                <span>{{user.date}}</span>
+<div class="wrapper">
+    <div class="user-comment-container">
+        <div  class="user-comment">
+           <div class="comment-card" *ngFor="let user of userComment">
+                <div class="card-head">
+                    <div class="image">
+                        <img [src]="user.image" alt="">
+                    </div>
+                    <div class="card-title">
+                        <span class="item1">{{user.name}}</span>
+                       <span class="item2">{{user.date}}</span>
+                    </div>
+                </div>
+                <div class="text">{{user.comment}}</div>
             </div>
         </div>
-        <div class="text">{{user.comment}}</div>
+    </div>
+    <div class="show-reviews">
+        <button>Show All 100 Reviews</button>
     </div>
 </div>

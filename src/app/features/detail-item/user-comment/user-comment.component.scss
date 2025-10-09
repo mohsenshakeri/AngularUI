@@ -1,10 +1,25 @@
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    //background-color: aquamarine;
+    width: 100%;
+    gap: 2rem;
+    margin: 1rem 0;
+}
+
 .user-comment-container{
-    background-color: darkcyan;
-    width: 80%;
+    width: 100%;
+}
+
+.user-comment{
+    margin: 0 4rem;
+    max-width: 1024px;
+    gap: 2rem;
+    align-items: first baseline;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    align-items: center;
-    gap: 1rem;
+
 }
 
 .comment-card{
@@ -13,7 +28,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: antiquewhite;
+
     gap: 0.5rem;
 }
 
@@ -29,9 +44,23 @@
     gap: 0.5rem;
     flex-direction: column;
     align-items: center;
-    background-color: aqua;
+
     text-align: left;
     width: 100%;
+}
+
+.item1{
+    font-size: 16px;
+    color: #484848;
+    font-family: sans-serif;
+    font-weight: 700;
+}
+
+.item2{
+    color: #9A9A9A;
+    font-size: 14px;
+    font-family: sans-serif;
+    font-weight: 500;
 }
 
 .card-title span{
@@ -39,17 +68,66 @@
 }
 
 .image{
-    width: 72px;
-    height: 72px;
+    aspect-ratio: 4/4;
+    max-width: 72px;
 }
 
 .image img{
     width: 100%;
     height: 100%;
     object-fit: cover;
-    border-radius: 50%;
+    border-radius: 55%;
 }
 
 .text{
     width: 100%;
+    font-size: 16px;
+    color: #828B94;
+    font-family: sans-serif;
+    font-weight: 500;
 }
+
+.show-reviews{
+    align-items: center;
+    width: 100%;
+}
+
+.show-reviews button{
+    border-radius: 6px;
+    border: 1px solid #388857;
+    padding: 1rem 2rem;
+    font-weight: 700;
+    font-family: sans-serif;
+    background-color: white;
+    font-size: 16px;
+    color: #388857;
+    cursor: pointer;
+    margin-left: 4rem;
+    margin-bottom: 1rem;
+}
+
+
+@media (max-width : 1024px) {
+    .user-comment{
+        max-width: 521px;
+        gap: 2rem;
+        margin: 0 2rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .show-reviews button{
+        margin-left: 1rem;
+    }
+    .image{
+        max-width: 52px;
+    }
+}
+
+@media (max-width : 768px) {
+    .user-comment{
+        margin: 0 1rem;
+    }
+}
+

@@ -57,10 +57,12 @@
 //--------- apartement cards ---------
 
 .apartment-cards{
+    gap: 1rem;
     display: grid;
     align-items: center;
     width: 100%;
     grid-template-columns: 1fr 1fr 1fr 1fr;
+
     background-color: yellow;
 }
 .apartment-cards div{
@@ -84,4 +86,19 @@
     color: #424950;
     font-family: sans-serif;
     font-weight: 700;
+}
+
+@media (max-width : 768px) {
+    .apartment-conteiner{
+        max-height: 467px;
+    }
+    .apartment-cards{
+        grid-template-columns: 1fr 1fr;
+    }
+    .apartment-cards div img{
+        width: 29px;
+    }
+    .apartment-cards div span{
+        font-size: 14px;
+    }
 }

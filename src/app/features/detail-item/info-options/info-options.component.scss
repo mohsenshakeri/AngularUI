@@ -1,0 +1,88 @@
+.info-container{
+    width: 100%;
+
+    align-items:first baseline;
+    display: flex;
+    gap: 1rem;
+    //display: grid;
+    //grid-template-columns: 1fr 1fr 1fr;
+}
+
+.company, .help-center, .contact-info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    max-width: 176px;
+}
+
+.title{
+    width: 100%;
+    font-size: 16px;
+    font-weight: 600;
+    font-family: sans-serif;
+    color: #484848;
+}
+
+.tags{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+
+    gap: 1rem;
+}
+
+.tags a{
+
+    width: 100%;
+    font-size: 14px;
+    font-family: sans-serif;
+    text-decoration: none;
+    color: #484848;
+    font-weight: 500;
+}
+
+.text{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+
+    gap: 1rem;
+}
+.text span{
+    color: #484848; 
+    font-size: 14px; 
+    font-family: sans-serif; 
+    font-weight: 500; 
+    width: 100%; 
+
+}
+
+.info-icons-container{
+    width: 100%;
+}
+
+.info-icons{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    width: 100%;
+
+    max-width: 176px;
+}
+
+.info-icons a{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+}
+
+.item{
+    width: 24px;
+}

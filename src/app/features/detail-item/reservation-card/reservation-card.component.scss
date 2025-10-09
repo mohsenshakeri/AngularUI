@@ -4,11 +4,12 @@
     align-items: center;
     justify-content: center;
     background-color: #FFFFFF;
-    width: 412px;
-    padding: 1rem;
+    //width: 412px;
+    padding: 2rem 1rem;
     gap: 1rem;
     border-radius: 10px;
     box-shadow: 0px 0px 16px 0px rgba(194, 198, 204, 0.6);
+    margin-right: 4rem;
 }
 
 .item1{
@@ -49,7 +50,7 @@
     display: flex;
     width: 100%;
     align-items: center;
-    justify-content: space-between;
+    gap: 2rem;
 }
 
 .item2-buttons button{
@@ -87,4 +88,10 @@
     font-size: 16px;
     font-weight: 500;
     font-family: sans-serif;
+}
+@media (max-width: 768px) {
+    .card-container{
+        width: 100%;
+        margin: 0.5rem 0.5rem;
+    }
 }

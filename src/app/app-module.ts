@@ -31,13 +31,17 @@ import { SafetyCardComponent } from './features/detail-item/safety-card/safety-c
 import { RateComponent } from './features/detail-item/rate/rate.component';
 import { UserCommentComponent } from './features/detail-item/user-comment/user-comment.component';
 import { StayUpdateComponent } from './features/detail-item/stay-update/stay-update.component';
+import { InfoOptionsComponent } from './features/detail-item/info-options/info-options.component';
+import { InfoLeftSideComponent } from './features/detail-item/info-left-side/info-left-side.component';
+import { DetailItemFooterComponent } from './features/detail-item/detail-item-footer/detail-item-footer.component';
+import { ApartmentDescriptionComponent } from './features/detail-item/apartment-description/apartment-description.component';
 
 @NgModule({
   declarations: [App, AdminPanelComponent, InputBoxsComponent, DetailsComponent, SigninButtonComponent,
      UserComponent, NavBarComponent, SignUpComponent, SignUpEmailComponent, ButtonDetailsComponent,
       Error404Component, UserListAdminComponent, UiballComponent, DetailItemComponent, ImagesViewComponent,
        ReservationCardComponent, ModernApartmentComponent, GhestServicesCardComponent, SafetyCardComponent,
-        RateComponent, UserCommentComponent, StayUpdateComponent],
+        RateComponent, UserCommentComponent, StayUpdateComponent, InfoOptionsComponent, InfoLeftSideComponent, DetailItemFooterComponent, ApartmentDescriptionComponent],
   imports: [BrowserModule, AppRoutingModule, FormsModule, RecaptchaModule],
   providers: [provideBrowserGlobalErrorListeners()],
   bootstrap: [App],
